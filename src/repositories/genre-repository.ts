@@ -1,5 +1,5 @@
 import { getManager } from "typeorm";
-import { Genre } from "../models/genre-models";
+import { Genre } from "../models/genre-model";
 
 const getAllGenres = () => {
     return getManager().query(`select *from genres`);

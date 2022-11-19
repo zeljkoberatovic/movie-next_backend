@@ -1,5 +1,5 @@
 import { getManager } from "typeorm";
-import { Movie } from "../models/movie-models";
+import { Movie } from "../models/movie-model";
   
 
 const getAllMovies = () => {

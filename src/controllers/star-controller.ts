@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { Star } from "../models/star-models";
+import { Star } from "../models/star-model";
 import starRepository from "../repositories/star-repository";
 
 const getAllStars = async (request: Request, response: Response) => {

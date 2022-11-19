@@ -1,5 +1,5 @@
 import { getManager } from "typeorm";
-import { Star } from "../models/star-models";
+import { Star } from "../models/star-model";
 
 const getAllStars = () => {
     return getManager().query(`select * from stars`);

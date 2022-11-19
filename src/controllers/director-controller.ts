@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { Director } from "../models/director-models";
+import { Director } from "../models/director-model";
 import directorRepository from "../repositories/director-repository";
 
 const getAllDirectors = async(request: Request,response: Response) =>{

@@ -1,5 +1,5 @@
 import { getManager } from "typeorm";
-import { Director } from "../models/director-models";
+import { Director } from "../models/director-model";
 
 const getAllDirectors = () => {
     return getManager().query('select * from directors');
