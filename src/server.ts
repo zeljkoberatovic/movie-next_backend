@@ -15,8 +15,9 @@ import userRouter from './routing/user-routing';
 //file- upload
 import fileUploadRouter from './common/file-upload';
 import path from 'path';
-//import midllewar
 import authMiddleware from './middleware/auth-middlewar';
+//import midllewar
+
 
 const app: Application = express();
 app.use(express.json());
@@ -25,12 +26,13 @@ const corsOptions: CorsOptions = {
     origin: 'http://localhost:4200',
     optionsSuccessStatus: 200
 }
+
 app.use(cors(corsOptions));
 
-app.use(authMiddleware,movieRouter);
-app.use(directorRouter);
-app.use(starRouter);
-app.use(genreRouter);
+app.use('/movies',authMiddleware,movieRouter);
+app.use('/directors',directorRouter);
+app.use('/stars',starRouter);
+app.use('/genres',genreRouter);
 app.use(userRouter);
 
 

@@ -3,6 +3,7 @@ export class User {
     name: string;
     is_admin: boolean;
     hashed_password: string;
+  
  
     constructor(username?:string, name?:string, is_admin?:boolean, hashed_password?:string){
         this.username = username;
@@ -32,26 +33,3 @@ export class User {
     password: string;
     }
     
-
-    //public static createUserByResult(dbResult: any): User{
-       // if(dbResult){
-         //   let user: User = new User();
-          //  user.username = dbResult.username;
-           // user.name = dbResult.name;
-           // user.hashedPassword = dbResult.hashed_Password;
-           // user.isAdmin = dbResult.isAdmin
-        //}
-       // else
-          // return null;
-    //}
-
-   // public static createUserListByResult(dbResult: any): User[] {
-       // let users : User[] = [];
-       // dbResult.forEach((res: any) =>{
-           // let user = User.createUserByResult(res);
-           // users.push(user);
-        //})
-        //return users;
-        //}
-    
-

@@ -13,7 +13,7 @@ const register = async(request: Request, response: Response) => {
     if(data.affectedRows == 1){
     const token = jwt.sign({
       username: user.username,
-      isadmin:false,
+      isAdmin:false,
    }, 'SECRET');
    response.send({success: true, token});
   }
@@ -26,6 +26,8 @@ const register = async(request: Request, response: Response) => {
   }) 
 };
 
+
+
 const login = async( request: Request, response: Response) => {
   const username = request.body.username;
   userRepository.getUserByUsername(username)
@@ -36,7 +38,7 @@ const login = async( request: Request, response: Response) => {
     if(user.hashed_password == hashed_password){
         const token = jwt.sign({
           username:user.username,
-          isadmin:user.is_admin,
+          isAdmin:user.is_admin,
         },'SECRET')
         response.send({success: true, token});
         }
